@@ -45,6 +45,7 @@ class DanhmucController extends Controller
         $title_category = CategoryPost::find($id);
         $more_category = CategoryPost::where('id', '<>', $id)->get();
         return view('frontend.category', compact('categories', 'showPosts', 'title_category', 'viewPosts', 'more_category'));
+        // return view('pages.about', compact('categories', 'showPosts', 'title_category', 'viewPosts', 'more_category'));
     }
 
     /**

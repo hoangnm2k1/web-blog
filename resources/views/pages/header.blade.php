@@ -5,11 +5,11 @@
                 <span class="menu"></span>
                 <ul class="navig">
                     <li><a href="{{ route('home.index') }}" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    {{-- <li><a href="about.html">About</a></li> --}}
                     @foreach ($categories as $cate)
-                        <li><a
-                                href="{{ route('danh-muc.show', [$cate->id, Str::slug($cate->title)]) }}">{{ $cate->title }}</a>
-                        </li>
+                    <li><a
+                            href="{{ route('danh-muc.show', [$cate->id, Str::slug($cate->title)]) }}">{{$cate->title}}</a>
+                    </li>
                     @endforeach
                 </ul>
             </div>
